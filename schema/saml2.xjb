@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+               version="2.0"
+               jaxb:extensionBindingPrefixes="xjc">
+               
+ 	<jaxb:bindings schemaLocation="saml-schema-assertion-2.0.xsd" node="/xsd:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="org.oasis.saml2.assertion" />
+		</jaxb:schemaBindings>
+		<jaxb:globalBindings>
+        	<xjc:simple />
+    	</jaxb:globalBindings>
+	</jaxb:bindings>
+	<jaxb:bindings schemaLocation="saml-schema-assertion-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='SubjectType']/xsd:choice/xsd:element[@ref='saml:SubjectConfirmation']">
+      	<jaxb:property name="SubjectConfirmation" />
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="saml-schema-assertion-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='AuthnContextType']/xsd:sequence/xsd:choice/xsd:choice/xsd:element[@ref='saml:AuthnContextDecl']">
+      	<jaxb:property name="AuthnContextDeclNonClassRef" />
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="saml-schema-assertion-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='AuthnContextType']/xsd:sequence/xsd:choice/xsd:choice/xsd:element[@ref='saml:AuthnContextDeclRef']">
+      	<jaxb:property name="AuthnContextDeclRefNonClassRef" />
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="saml-schema-assertion-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='ConditionsType']/xsd:choice/xsd:element[@ref='saml:Condition']">
+      	<jaxb:property name="ConditionsAndOneTimeUsesAndAudienceRestrictions" />
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="saml-schema-assertion-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='AssertionType']/xsd:sequence/xsd:choice/xsd:element[@ref='saml:Statement']">
+      	<jaxb:property name="AuthnStatementsAndAuthzDecisionStatementsAndAttributeStatements" />
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="saml-schema-assertion-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='AttributeStatementType']/xsd:complexContent/xsd:extension/xsd:choice/xsd:element[@ref='saml:Attribute']">
+      	<jaxb:property name="EncryptedAttributesAndAttributes" />
+    </jaxb:bindings> 
+    
+      
+	<jaxb:bindings schemaLocation="saml-schema-protocol-2.0.xsd" node="/xsd:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="org.oasis.saml2.protocol" />
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+	<jaxb:bindings schemaLocation="saml-schema-protocol-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='ResponseType']/xsd:complexContent/xsd:extension/xsd:choice/xsd:element[@ref='saml:Assertion']">
+      	<jaxb:property name="EncryptedAssertionsAndAssertions" />
+    </jaxb:bindings>
+    
+    
+	<jaxb:bindings schemaLocation="saml-schema-metadata-2.0.xsd" node="/xsd:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="org.oasis.saml2.metadata" />
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+	<jaxb:bindings schemaLocation="saml-schema-metadata-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='EntityDescriptorType']/xsd:sequence/xsd:choice/xsd:choice/xsd:element[@ref='md:RoleDescriptor']">
+      	<jaxb:property name="IDPDescriptorAndSSODescriptorAndRoleDescriptors" />
+    </jaxb:bindings>
+	<jaxb:bindings schemaLocation="saml-schema-metadata-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='ExtensionsType']/xsd:sequence/xsd:any">
+      	<jaxb:property name="ImplementedExtensions" />
+    </jaxb:bindings>
+	<jaxb:bindings schemaLocation="saml-schema-metadata-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='EntitiesDescriptorType']/xsd:sequence/xsd:choice/xsd:element[@ref='md:EntitiesDescriptor']">
+      	<jaxb:property name="EntitiesDescriptorsAndEntityDescriptors" />
+    </jaxb:bindings> 
+	<jaxb:bindings schemaLocation="saml-schema-metadata-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='ContactType']/xsd:sequence/xsd:element[@ref='md:EmailAddress']">
+      	<jaxb:property name="EmailAddress" />
+    </jaxb:bindings>
+    
+     
+    <jaxb:bindings schemaLocation="http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd" node="/xsd:schema/xsd:complexType[@name='X509DataType']/xsd:sequence/xsd:choice/xsd:element[@name='X509IssuerSerial']">
+    	<jaxb:property name="X509DataContent" />
+    </jaxb:bindings>
+   
+</jaxb:bindings>

@@ -1,0 +1,22 @@
+
+version = '0.1'
+    
+dependencies {
+    compile project(':xmlprocessor')
+    compile group: 'org.apache.commons', name: 'com.springsource.org.apache.commons.codec', version: '1.3.0', configuration: 'compile'
+}
+
+task generate << {
+	ant.taskdef(name: 'xjc', classname: 'com.sun.tools.xjc.XJCTask') {
+		classpath {
+            fileset(dir: 'lib/jaxb/2.1.12')
+        }
+	}
+
+	ant.xjc(destdir: 'src/main/java', binding: 'schema/saml2.xjb', extension: true) {
+		arg(value: '-verbose')
+		schema(dir: 'schema') {
+			include(name: '*.xsd')
+		}
+	}
+}

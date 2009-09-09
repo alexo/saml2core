@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<classpath>
+  <classpathentry kind="src" path="src/main/java"/>
+  <classpathentry kind="output" path="build/classes"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="src" path="/xmlprocessor" combineaccessrules="false"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/jline/jline/jars/jline-0.9.94.jar"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/junit/junit/jars/junit-3.8.2.jar"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.apache.ant/ant-launcher/jars/ant-launcher-1.7.1.jar"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.apache.ant/ant/jars/ant-1.7.1.jar"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.apache.log4j/com.springsource.org.apache.log4j/jars/com.springsource.org.apache.log4j-1.2.15.jar"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.apache.log4j/com.springsource.org.apache.log4j/licenses/license-1.2.15.txt"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.apache.log4j/com.springsource.org.apache.log4j/srcs/com.springsource.org.apache.log4j-sources-1.2.15.jar"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.codehaus.groovy/groovy-all/jars/groovy-all-1.6.4.jar"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.junit/com.springsource.org.junit/jars/com.springsource.org.junit-4.7.0.jar"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.junit/com.springsource.org.junit/licenses/license-4.7.0.txt"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.junit/com.springsource.org.junit/srcs/com.springsource.org.junit-sources-4.7.0.jar"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.slf4j/com.springsource.slf4j.api/jars/com.springsource.slf4j.api-1.5.6.jar"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.slf4j/com.springsource.slf4j.api/licenses/license-1.5.6.txt"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.slf4j/com.springsource.slf4j.api/srcs/com.springsource.slf4j.api-sources-1.5.6.jar"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.slf4j/com.springsource.slf4j.log4j/jars/com.springsource.slf4j.log4j-1.5.6.jar"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.slf4j/com.springsource.slf4j.log4j/licenses/license-1.5.6.txt"/>
+  <classpathentry kind="lib" path="/Users/beddoes/.gradle/cache/org.slf4j/com.springsource.slf4j.log4j/srcs/com.springsource.slf4j.log4j-sources-1.5.6.jar"/>
+</classpath>
