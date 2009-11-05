@@ -15,7 +15,7 @@
     	</jaxb:globalBindings>
 	</jaxb:bindings>
 	<jaxb:bindings schemaLocation="saml-schema-assertion-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='SubjectType']/xsd:choice/xsd:element[@ref='saml:SubjectConfirmation']">
-      	<jaxb:property name="SubjectConfirmation" />
+      	<jaxb:property name="SubjectConfirmationNonID" />
     </jaxb:bindings>
     <jaxb:bindings schemaLocation="saml-schema-assertion-2.0.xsd" node="/xsd:schema/xsd:complexType[@name='AuthnContextType']/xsd:sequence/xsd:choice/xsd:choice/xsd:element[@ref='saml:AuthnContextDecl']">
       	<jaxb:property name="AuthnContextDeclNonClassRef" />
