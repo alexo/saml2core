@@ -5,6 +5,16 @@ configurations {
 	xjc
 }
 
+def generatedSourceDir = 'src/generated/java'
+sourceSets {
+	main {
+		java {
+			generatedSourceDir
+			'src/main/java'
+		}
+	}
+}
+
 dependencies {
     compile project(':xmlprocessor')
     compile group: 'org.apache.commons', name: 'com.springsource.org.apache.commons.codec', version: '1.3.0', configuration: 'compile'
@@ -15,7 +25,8 @@ dependencies {
 task generate << {
 	ant.taskdef(name: 'xjc', classname: 'com.sun.tools.xjc.XJCTask', classpath: configurations.xjc.asPath)
 
-	ant.xjc(destdir: 'src/main/java', binding: 'schema/saml2.xjb', extension: true) {
+	file(generatedSourceDir).mkdirs()
+	ant.xjc(destdir: generatedSourceDir, binding: 'schema/saml2.xjb', extension: true) {
 		arg(value: '-verbose')
 		schema(dir: 'schema') {
 			include(name: '*.xsd')

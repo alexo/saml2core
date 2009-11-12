@@ -2,3 +2,4 @@ junit*.properties
 .gradle/*
 build/*
 repos/*
+src/generated/
